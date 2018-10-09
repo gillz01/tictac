@@ -1,0 +1,66 @@
+<!Doctype HTML>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Click Game</title>
+  <link rel="stylesheet" type="text/css" href="game.css">
+  <script type="text/javascript" src="game.js"></script>
+</head>
+<body>
+
+<center>
+<div id="mainBody">
+<div id="title"><strong>VARAN'S TIC-TAC-TOE</strong></div> <br>
+</center>
+<div id="upperBar">
+  <div class="sticker" id="Vlogo">VG</div>
+  <input type ="submit" id="scoreButton" value ="Reset Score" onClick="resetScore();">
+</div>
+<center>
+  <p id="winnerAnnounce">Player 1, select your icon at the bottom.</p>
+<div id="tableData">
+<table>
+  <tr>
+    <td class="cell" onClick="clickBox(0,0);"><img id="00" class="image" src="blank.png"/></td>
+    <td class="cell" onClick="clickBox(0,1);"><img id="01" class="image" src="blank.png"/></td>
+    <td class="cell" onClick="clickBox(0,2);"><img id="02" class="image" src="blank.png"/></td>
+  </tr>
+    <tr>
+    <td class="cell" onClick="clickBox(1,0);"><img id="10" class="image" src="blank.png"/></td>
+    <td class="cell" onClick="clickBox(1,1);"><img id="11" class="image" src="blank.png"/></td>
+    <td class="cell" onClick="clickBox(1,2);"><img id="12" class="image" src="blank.png"/></td>
+  </tr>
+    <tr>
+    <td class="cell" onClick="clickBox(2,0);"><img id="20" class="image" src="blank.png"/></td>
+    <td class="cell" onClick="clickBox(2,1);"><img id="21" class="image" src="blank.png"/></td>
+    <td class="cell" onClick="clickBox(2,2);"><img id="22" class="image" src="blank.png"/></td>
+  </tr>
+  </table>
+  </div>
+  <br>
+  <div id="button">
+      <input type ="submit" id="Button" value ="Restart" onClick="reset();">
+      <!--<input type ="submit" id="scoreButton" value ="Reset Score" onClick="resetScore();">-->
+  </div>
+    <div id="selectIcon">
+      Player 1, select your icon here, <br> Player 2 will have the opposite. <br>
+      <input type ="submit" id="Button" value ="Play as Sun!" onClick="pickIcon(1);">
+      <input type ="submit" id="Button" value ="Play as Moon!" onClick="pickIcon(2);">
+    </div>
+  <div id="gameScoreboard">
+    <div id="sunScoreboard" align="left">
+      <img src="sun.png" class="image" id="sunImg">
+      <div id="sunScorekeep">0</div>
+    </div>
+    <div id="moonScoreboard" align="right">
+      <img src="moon.png" class="image" id="moonImg">
+      <div id="moonScorekeep">0</div>
+    </div>
+  </div>
+</div>
+</center>
+</body>
+</html>
